@@ -11,12 +11,13 @@ mongoose.connection.once('open', () => console.log('Now connected to MongoDB Atl
 // Server setup
 const app = express();
 
-const corsOptions = {
-	origin: ['http://localhost:3000', 'https://zuitt-shop-eta.vercel.app/', 'https://zuitt-shop-1lnqwjf19-zuitt.vercel.app/'],
-	optionsSuccessStatus: 200
-}
+// const corsOptions = {
+// 	origin: ['http://localhost:3000', 'https://zuitt-shop-eta.vercel.app/', 'https://zuitt-shop-1lnqwjf19-zuitt.vercel.app/'],
+// 	optionsSuccessStatus: 200
+// }
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 
