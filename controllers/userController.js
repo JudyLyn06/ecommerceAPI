@@ -75,19 +75,19 @@ module.exports.checkout = (userId, cart) => {
 					totalAmount: cart.totalAmount
 				}
 			);
-			console.log(user.orders, "orders");
-			console.log(user.orders[0].products, "orders productId");
+			// console.log(user.orders, "orders");
+			// console.log(user.orders[0].products, "orders productId");
 			return user.save().then((updatedUser, error) => {
 				if(error){
 					return false;
 				} else {
 					const currentOrder = updatedUser.orders[updatedUser.orders.length-1];
-					console.log("products", currentOrder.products)
+					// console.log("products", currentOrder.products)
 					currentOrder.products.forEach(product => {
-						console.log("product", product)
-						console.log("productId", product.productId)
+						// console.log("product", product)
+						// console.log("productId", product.productId)
 						Product.findById(product.productId).then(foundProduct => {
-							console.log("found", foundProduct)
+							// console.log("found", foundProduct)
 							foundProduct.orders.push({orderId: currentOrder._id})
 
 							foundProduct.save()
