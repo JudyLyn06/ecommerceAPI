@@ -1,0 +1,20 @@
+{
+  "name": "csp2",
+  "version": "1.0.0",
+  "description": "* Booking System MVP requirements * Model Definition for Users and Courses * Booking System API Dependencies ## Presentation [S37 Presentation](https://docs.google.com/presentation/d/1akp_lUdS2z9nWOzwfjfrr_I4WRqfsa573kXMdxfhFQQ/edit?usp=sharing)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.2",
+    "nodemon": "^2.0.19"
+  }
+}
